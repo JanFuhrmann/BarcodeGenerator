@@ -1,4 +1,4 @@
-public class Main {
+public class BarcodeGenerator {
     private static final String BARCODE = "123456789101"; // EAN-13: CC OOOOO AAAAA D with C:country, O:organisation, A:article, D:digit
     private static int[] barcodeInt;
 
@@ -13,9 +13,9 @@ public class Main {
      * @return The converted Integer array
      */
     private static int[] convertToIntArray() {
-        int[] barcodeInt = new int[Main.BARCODE.length() + 1];
-        for (int i = 0; i < Main.BARCODE.length(); i++) {
-            barcodeInt[i] = Integer.parseInt(Main.BARCODE.charAt(i) + "");
+        int[] barcodeInt = new int[BARCODE.length() + 1];
+        for (int i = 0; i < BARCODE.length(); i++) {
+            barcodeInt[i] = Integer.parseInt(BARCODE.charAt(i) + "");
         }
         return barcodeInt;
     }
